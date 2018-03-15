@@ -1,0 +1,27 @@
+[0821/095352.713:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/095418.598:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/100352.715:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/100352.715:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/100852.716:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/102352.720:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/103852.750:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/105352.750:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/110852.752:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/112352.753:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/113852.772:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/115352.773:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/120852.775:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/122352.777:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/123852.799:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/125352.799:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/130852.800:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/132352.802:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/133852.803:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/135352.804:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/140852.824:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/142352.841:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/143852.884:ERROR:crash_report_database_win.cc(427)] unexpected header
+[0821/144316.255:ERROR:process_info.cc(632)] range at 0x1cb2739400000000, size 0x23d fully unreadable
+[0821/144316.255:ERROR:process_info.cc(632)] range at 0x1cb273f800000000, size 0x23d fully unreadable
+[0821/144316.255:ERROR:process_info.cc(632)] range at 0x0, size 0x23d fully unreadable
+[0821/144318.693:ERROR:crash_report_database_win.cc(427)] unexpected header

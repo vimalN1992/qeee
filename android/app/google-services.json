@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "347277819182",
+    "firebase_url": "https://qeee-557a7.firebaseio.com",
+    "project_id": "qeee-557a7",
+    "storage_bucket": "qeee-557a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347277819182:android:53299fb21b7e0c3f",
+        "android_client_info": {
+          "package_name": "com.navigation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347277819182-fvqhhblb5odc69eu0cg8b8seje65i4tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBXmo3c_xdDn56sDqXv8VYtJ08xjos4b0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
