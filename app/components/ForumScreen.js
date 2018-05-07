@@ -44,7 +44,7 @@ static navigationOptions = ({ navigation }) => {
             style={{ marginLeft: 20 }}
         />;
             header.headerTitle = navigation.state.params.id.cname;
-            header.drawerLabel = 'Forum            ';
+            header.drawerLabel = 'Forum';
             header.drawerIcon =  ({ tintColor }) => (
               <MaterialIcons
                 name="forum"

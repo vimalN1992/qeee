@@ -65,10 +65,16 @@ class ViewBook extends Component {
         const s1 = source.replace(/\+/g, '%20'); 
         const t1 = decodeURIComponent(s1);
 
-const htmlView = t1.replace(/<\/video>/g,"Video can be played in Videos Tab")
-                   .replace(/<\/?video[^>]*>/g,"")         
-                   .replace(/<\/?a[^>]*>/g,"")
-                   .replace(/<\/?img[^>]*>/g,"Pdf can be download in Download Tab");
+        const htmlView = t1.replace('<img src="http://qeee.in/coursepack/site/images/pdf.png"/>', 'Pdf can be download in Download Tab')
+             .replace('<img src="http://qeee.in/coursepack/site/images/pdf.png"/>', 'Pdf can be download in Download Tab')
+             .replace('<img src="http://qeee.in/coursepack/site/images/pdf.png"/>', 'Pdf can be download in Download Tab')
+             .replace('<img src="http://qeee.in/coursepack/site/images/pdf.png"/>', 'Pdf can be download in Download Tab')
+             .replace('<img src="http://qeee.in/coursepack/site/images/pdf.png"/>', 'Pdf can be download in Download Tab')
+             .replace('<img src="http://qeee.in/coursepack/site/images/pdf.png"/>', 'Pdf can be download in Download Tab')
+             .replace(/<\/video>/g,"Video can be played in Videos Tab")
+             .replace(/<\/?video[^>]*>/g,"")
+             .replace(/<\/?strong[^>]*>/g,"")         
+             .replace(/<\/?a[^>]*>/g,"");
 
         return ( <WebView source={{ html: htmlView }} /> );  
 

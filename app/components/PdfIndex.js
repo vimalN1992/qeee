@@ -21,7 +21,7 @@ import * as courseActions from '../actions/courses';
 import { _ } from 'lodash';
 import { List, ListItem } from 'react-native-elements';
 
-class VideoIndex extends Component {
+class PDFIndex extends Component {
   static navigationOptions = ({ navigation }) => { 
         const header = headerProp(navigation);
         header.headerLeft = <TouchableHighlight
@@ -89,7 +89,12 @@ class VideoIndex extends Component {
         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick.bind(this));
     }
     componentWillReceiveProps(nextProps) { 
-
+      if(_.isEmpty(_.trim(nextProps.courses.BookIndex.index))){
+        this.setState({
+          item: null,
+          loading: false,
+        }); 
+      }else{
       const data = _.remove(_.map(nextProps.courses.BookIndex.index, function (v, id) {
             return _.map(v.data.pdf, function (d) { 
                 return { 
@@ -107,7 +112,8 @@ class VideoIndex extends Component {
           item: data,
           loading: false,
           dataSource: ds.cloneWithRows([].concat.apply([], data)),
-        });    
+        });
+      }    
     }
 
  _renderRow(rowData, s, i) {
@@ -133,7 +139,7 @@ class VideoIndex extends Component {
       return(<View>
             <ActivityIndicator style={{ margin: 100 }} />
         </View>);  
-    }else if(_.isEmpty(this.state.item)){
+    }else if(_.isEmpty(this.state.item) || this.state.item == null){
        return(<View style={styles.bgcontainer}>
             <Text style={styles.paragraph}>
               Pdf aren't Available
@@ -168,7 +174,6 @@ const styles = StyleSheet.create({
     paragraph: {
       margin: 24,
       fontSize: 18,
-      fontWeight: 'bold',
       textAlign: 'center',
       color: '#34495e',
     },
@@ -198,4 +203,4 @@ const mapDispatchToProps = (dispatch) => {
         dispatch
     });
 }
-export default connect(mapStateToProps,mapDispatchToProps)(VideoIndex);
+export default connect(mapStateToProps,mapDispatchToProps)(PDFIndex);

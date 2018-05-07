@@ -89,8 +89,15 @@ class BookIndex extends Component {
     componentWillUnmount() {
         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick.bind(this));
     }
-    componentWillReceiveProps(nextProps) { 
-      const data = _.map(nextProps.courses.BookIndex.index, function (v) { 
+    componentWillReceiveProps(nextProps) {
+
+      if(_.isEmpty(_.trim(nextProps.courses.BookIndex.index))){
+        this.setState({
+          item: null,
+          loading: false,
+        }); 
+      }else{
+        const data = _.map(nextProps.courses.BookIndex.index, function (v) { 
             return {
                 name: v.title,
                 source: v.data.html,
@@ -102,7 +109,9 @@ class BookIndex extends Component {
           item: data,
           loading: false,
           dataSource: ds.cloneWithRows(_.values(data)),
-        });    
+        }); 
+      }
+           
     }
 
  _renderRow(rowData, s, i) { 
@@ -135,10 +144,19 @@ class BookIndex extends Component {
   } 
 
   render() {
-    if (this.state.loading) 
+    if (this.state.loading){ 
       return(<View>
             <ActivityIndicator style={{ margin: 100 }} />
-        </View>);  
+        </View>);
+    }else if(this.state.item == null){
+      return(
+          <View style={{flex: 1,alignItems: 'center',justifyContent: 'center',backgroundColor: '#ecf0f1'}}>
+            <Text style={{justifyContent: 'center',margin: 24,fontSize: 18,textAlign: 'center',color: '#34495e',}}>
+              There is no Books Available for this Course.
+            </Text>
+          </View>
+          );
+    }else{  
      return (
           <List style={{padding:0,margin:0}} >
                   <ListView
@@ -147,6 +165,7 @@ class BookIndex extends Component {
                   />        
                 </List>
     );
+    }
   }
 }
 

@@ -61,7 +61,12 @@ componentWillUnmount() {
 }
 
 handleBackButtonClick() {
-   return this.props.navigation.dispatch(NavigationActions.navigate({ routeName: 'Login' }));
+  if(this.props.navigation.state.routeName == 'BS2Main'){
+   return this.props.navigation.dispatch(NavigationActions.navigate({ routeName: 'Main' }));
+  }else{
+    return BackHandler.exitApp();
+  }
+  
 }
  
  objectLength(obj) {

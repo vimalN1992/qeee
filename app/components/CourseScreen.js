@@ -39,7 +39,7 @@ class CourseScreen extends Component {
                                 </TouchableHighlight>;
           header.headerRight =  <TopRightmenu nav={navigation} />;
           header.headerTitle = 'Forum';
-          header.drawerLabel = 'Forum';
+          header.drawerLabel = 'Forum     ';
           header.drawerIcon =  ({ tintColor }) => (
               <MaterialIcons
                 name="forum"

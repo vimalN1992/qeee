@@ -95,7 +95,7 @@ const src = "http://qeee.in/coursepack/generate_books/generated_books/"+cid+"/fi
                      }}
                     >
                     <Image
-                      style={{ width: 70, height: 70,}}
+                      style={{ width: 70, height: 70,borderWidth:2,borderColor:'#32313F'}}
                       source={{uri: 'http://qeee.in/coursepack/site/images/pdf.png'}}
                     />
                     </TouchableHighlight>

@@ -44,7 +44,7 @@ static navigationOptions = ({ navigation }) => {
             header.headerTitle = 'Current Phase Courses';
             header.drawerLabel = 'Current Phase Courses           ';
             header.drawerIcon =  ({ tintColor }) => (
-              <Icon
+              <MaterialIcons
                 name="book"
                 size={20}
                 style={{ color: tintColor }}

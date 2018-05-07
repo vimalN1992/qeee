@@ -91,5 +91,4 @@ mapStateToProps = ({ Auth }) => {
   })
 }
 
-
 export default connect(mapStateToProps, { onLogout })(RightMenu);

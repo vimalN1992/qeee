@@ -47,8 +47,6 @@ import ViewBookWebView from '../components/ViewBook.js';
 import VP from '../components/VideoPlayer.js';
 import PDF from '../components/PDF_download.js';
 
-import All_Phase_Course from '../components/All_Courses.js';
-
 import { SBHeaderStyle, headerProp } from '../config/Config'; 
 
 const ForumStack = StackNavigator({
@@ -69,10 +67,6 @@ const HomeStack = StackNavigator({
     Session: { screen: Sessions, navigationOptions: { tabBarVisible: false } },  
     },{
     headerMode: 'none'
-});
-
-const AllPhaseCourseStack = StackNavigator({ 
-    AllPhaseCourse: { screen: All_Phase_Course},
 });
 
 export const BrwCourseTab = TabNavigator({
@@ -222,10 +216,6 @@ const DrawerRouteConfigs = {
     Current_Phase_Courses : {
         path: '/cur_pha_crses',
         screen: Cur_Phase_CourseStack,
-    },
-    All_Phase_Courses : {
-        path: '/cur_pha_crses',
-        screen: AllPhaseCourseStack,
     }
 }
 const DrawerNavigatorConfig = {
@@ -299,19 +289,6 @@ export const AllcourseTabView = TabNavigator({
     lazy: true
      });
 
-export const AllPhaseStack =  StackNavigator({
-    
-        BS1Main: { screen: AllcourseTabView },
-        BS2Main: { screen: CourseOutline, navigationOptions: { tabBarVisible: false }},
-        BS3Main: { screen: Description, navigationOptions: { tabBarVisible: false }},
-        BS4Main: { screen: BrwCourseTabMain, navigationOptions: { tabBarVisible: false }},
-        BS6Main: { screen: ViewBookWebView, navigationOptions: { tabBarVisible: false }},
-        BS7Main: { screen: VP, navigationOptions: { tabBarVisible: false }},
-        BS8Main: { screen: PDF, navigationOptions: { tabBarVisible: false }}
-    
-},{
-      headerMode: 'none'
-});
 
 const AppNavigatorStack = {
     AllCourse:{ screen: StackNavigator({

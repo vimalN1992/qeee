@@ -6,6 +6,7 @@ import { View,
     TouchableHighlight, 
     ScrollView ,
     ActivityIndicator,
+    AsyncStorage,
     BackHandler
 } from 'react-native';
 import HTMLView from 'react-native-htmlview';
@@ -50,14 +51,23 @@ class CoursesOutline extends Component {
 
     constructor(props) {
         
-        super(props);   
+        super(props);  
+        
         const { params } = this.props.navigation.state; 
         this.props.getCourseOutline(params.id);
 
-        this.state = { course : null }
+        this.state = { course : null, cach_uname:null}
+        this._loadInitialState().done(); 
     } 
+    _loadInitialState = async () => {
+      var uname = await AsyncStorage.getItem('username');
+      this.setState({
+        cach_uname:uname
+      })
+    }
 
     handleBackButtonClick() {
+        
         if(this.props.navigation.state.routeName == 'BS2Main'){
           return this.props.navigation.dispatch(NavigationActions.navigate({ routeName: this.props.navigation.state.params.route }));
         }else if(this.props.navigation.state.params.route == 'Home'){

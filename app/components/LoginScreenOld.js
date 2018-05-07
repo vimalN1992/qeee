@@ -117,7 +117,13 @@ class LoginScreen extends Component {
                               <Text style={styles.errorText} >{this.props.error}</Text> 
                               {this.renderButton.call(this)}           
                           </View> 
-                          
+                    <TouchableHighlight underlayColor='transparent' onPress={()=>{this.props.navigation.navigate('Skip')}}> 
+                      <View style={styles.borderButton} >
+                        <Text style={{ flex:1, alignSelf: 'center', color: 'orange', fontSize: 16 }}>
+                           All Courses      
+                        </Text>
+                      </View> 
+                    </TouchableHighlight>
                       </ScrollView> 
                   <View style={styles.LoginFooter} />
 

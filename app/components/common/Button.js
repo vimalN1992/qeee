@@ -38,7 +38,6 @@ const styles = {
     buttonText: {
         fontSize: 16,
         alignSelf: 'center',
-        fontWeight: '600',
         paddingTop: 10,
         paddingBottom: 10,
         color: 'white'

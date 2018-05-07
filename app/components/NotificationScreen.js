@@ -91,7 +91,7 @@ class Tab extends Component {
   render(){
     return(
     <View>
-    <Text style={{marginLeft:10,fontWeight:'bold',color:'red',fontSize:8}}>
+    <Text style={{marginLeft:10,color:'red',fontSize:8}}>
     {this.state.noti_count  }   
     </Text>
     </View>
@@ -210,7 +210,6 @@ const styles = StyleSheet.create({
   paragraph: {
     margin: 24,
     fontSize: 18,
-    fontWeight: 'bold',
     textAlign: 'center',
     color: '#34495e',
   },

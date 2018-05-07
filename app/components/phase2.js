@@ -22,7 +22,7 @@ import { SBHeaderStyle, headerProp } from '../config/Config';
 import {NavigationActions} from 'react-navigation';
 import { getAllPhaseCourses, selectBook, viewBook } from '../actions/courses'; 
 
-class AllCourses extends Component {
+class phase2 extends Component {
  
  static navigationOptions = ({ navigation }) => { 
                                 
@@ -61,7 +61,11 @@ componentWillUnmount() {
 }
 
 handleBackButtonClick() {
-   return this.props.navigation.dispatch(NavigationActions.navigate({ routeName: 'Login' }));
+   if(this.props.navigation.state.routeName == 'BS2Main'){
+   return this.props.navigation.dispatch(NavigationActions.navigate({ routeName: 'Main' }));
+  }else{
+    return BackHandler.exitApp();
+  }
 }
  
  objectLength(obj) {
@@ -154,4 +158,4 @@ mapStateToProps = ({ courses }) => {
 }
 
 
-export default connect(mapStateToProps, { getAllPhaseCourses, selectBook })(AllCourses);
+export default connect(mapStateToProps, { getAllPhaseCourses, selectBook })(phase2);
